@@ -1,0 +1,24 @@
+@import './colors.scss';
+
+@mixin blur-bg {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(194, 190, 160, 0.35);
+}
+
+@mixin text($fz, $color, $fontFamily) {
+    font-family: $fontFamily;
+    font-size: $fz;
+    color: $color;
+}
+
+@mixin button($br, $bg) {
+    border-radius: $br;
+    background: $bg;
+}
+
+@mixin bg($bg, $br) {
+    background: $bg;
+    border-radius: $br;
+}

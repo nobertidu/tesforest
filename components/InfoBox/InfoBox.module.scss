@@ -1,0 +1,15 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+    @include blur-bg;
+    @include text(1.5rem, $main-white, Jost);
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 3.9rem 3.9rem 5rem;
+    @media(max-width: 755px) {
+        @include text(.9rem, $main-white, Jost);
+        padding: 1rem 1rem 1.5rem;
+    }
+}

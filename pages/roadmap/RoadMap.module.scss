@@ -1,0 +1,59 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.83) 0%, rgba(43, 43, 43, 0) 20%), url('/background/RoadMapBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 0 27rem;
+    @media(max-width: 755px) {
+        padding: 0 0 15rem;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 57.81%, #FFFFFF 100%), linear-gradient(180deg, rgba(35, 79, 24, 0.76) 0%, rgba(0, 0, 0, 0) 100%), url('/background/RoadMapBg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+}
+
+.roadmapContainer {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -4rem;
+    background: url('/background/clipPathGallery.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 18px;
+    box-shadow: 0px 19px 33px rgba(111, 109, 113, 0.13);
+    padding: 4rem 5rem;
+    position: relative;
+    @media(max-width: 755px) {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: -15rem;
+        background: none;
+        box-shadow: none;
+        padding: 1rem 2rem;
+    }
+    .leavecontainer {
+        position: absolute;
+        top: -2.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        @media(max-width: 755px) {
+            display: none;
+        }
+    }
+    .stepBarContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .greenStepBarContainer {
+            padding-top: 3rem;
+        }
+    }
+}

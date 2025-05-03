@@ -1,0 +1,81 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/mixins.scss';
+
+.container {
+    margin-top: -4rem;
+    position: relative;
+    .leaveContainer {
+        position: absolute;
+        top: -2rem;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    .contentContainer {
+        width: 90%;
+        margin: 0 auto;
+        padding: 4rem 5rem;
+        background: url('/background/clipPathOne.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 19px 33px rgba(111, 109, 113, 0.13);
+        display: grid; 
+        grid-template-columns: repeat(2,minmax(0, 1fr));
+        gap: 2rem 6rem; 
+        grid-template-areas: 
+            ". secondPart"
+            ". secondPart";
+            @media(max-width: 755px) {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                padding: 1.875rem;
+                background: url('/background/clipPathOne.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .titleContainer {
+            height: fit-content;
+            @include text(2.4rem, $main-title-dark, JostBold);
+            line-height: 50px;
+            @media(max-width: 955px) {
+                @include text(1.5rem, $main-title-dark, JostBold);
+                line-height: 25px;
+            }
+        }
+        .descriptionContainer {
+            @include text(1.1rem, $main-text-dark, Jost);
+            line-height: 170%;
+            @media(max-width: 755px) {
+                @include text(.7rem, $main-title-dark, Jost);
+            }
+        }
+        .conclusionContainer {
+            grid-area: secondPart;
+            @include text(1rem, $main-text-dark, JostBold);
+            display: flex;
+            flex-direction: column;
+            align-self: normal;
+            gap: 2rem;
+            @media(max-width: 755px) {
+                @include text(.8rem, $main-text-dark, JostBold);
+            }
+            .factsContainer {
+                @include text(1rem, $main-text-dark, Jost);
+                display: flex;
+                flex-direction: column;
+                gap: .4rem;
+                padding-left: .9rem;
+                text-align: left;
+                @media(max-width: 755px) {
+                    @include text(.6rem, $main-title-dark, Jost);
+                }
+            }
+        }
+    }
+}

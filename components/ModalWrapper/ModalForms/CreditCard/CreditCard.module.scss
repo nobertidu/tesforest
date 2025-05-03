@@ -1,0 +1,134 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/mixins.scss';
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+    .contentContainer {
+        position: relative;
+        padding: 3rem;
+        @include bg(linear-gradient(180deg, #FFFFFF 0%, #E4E4E4 100%), 15px);
+        z-index: 13;
+        max-height: 95%;
+        overflow: scroll;
+        @media(max-width: 420px) {
+            padding: 1rem;
+        }
+        .closingButtonContainer{
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            cursor: pointer;
+        }
+        .donationFormContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            .subHeadlineContainer {
+                @include text(1.3rem, $main-dark-grey, Jost);
+                text-transform: uppercase;
+            }
+            .headlineContainer {
+                @include text(3rem, $main-dark-grey, JostBold);
+                text-transform: capitalize;
+            }
+            .formContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                .usdContainer {
+                    @include text(1rem, $main-light-grey, JostBold);
+                }
+                .creditCardContainer {
+                    display: flex;
+                    width: 200px;
+                    gap: 1rem;
+                }
+                // .inputContainer {
+                //     display: flex;
+                //     justify-content: space-between;
+                //     @include bg($main-white, 15px);
+                //     border: 1px solid #D6D6D6;
+                //     padding: 1.5rem 1rem;
+                //     // width: 90vw;
+                //     input {
+                //         border: none;
+                //         width: 75%;
+                //         @include text(1rem, $main-light-grey, Jost);
+                //     }
+                //     .usdContainer {
+                //         @include text(1rem, $main-light-grey, JostBold);
+                //     }
+                //     .creditCardContainer {
+                //         display: flex;
+                //         width: 200px;
+                //         gap: 1rem;
+                //     }
+                // }
+                .cardSecurityCodesContainer {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1rem;
+                    // @media(max-width: 656px) {
+                    //     flex-direction: column;
+                    // }
+                    .absoluteImageContainer {
+                        position: absolute;
+                        top: -.5rem;
+                        right: 2rem;
+                    }
+                    // .inputSmallContainer {
+                    //     display: flex;
+                    //     justify-content: space-between;
+                    //     @include bg($main-white, 15px);
+                    //     border: 1px solid #D6D6D6;
+                    //     padding: 1.5rem 1rem;
+                    //     // width: 25vw;
+                    //     position: relative;
+                    //     input {
+                    //         border: none;
+                    //         width: 35vw;
+                    //         @include text(1rem, $main-light-grey, Jost);
+                    //     }
+                    //     // .absoluteImageContainer {
+                    //     //     position: absolute;
+                    //     //     top: -.5rem;
+                    //     //     right: 2rem;
+                    //     // }
+                    // }
+                }
+                .buttonContainer {
+                    display: flex;
+                    align-items: center;
+                    width: fit-content;
+                    @include button(67px, $linear-gradient-green);
+                    @include text(1rem, $main-white, Jost);
+                    padding: 1rem 2.5rem;
+                    margin: 0 auto;
+                    cursor: pointer;
+                    border: none;
+                    padding-top: 1rem;
+                }
+            }
+        }
+    }
+}

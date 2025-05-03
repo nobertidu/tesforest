@@ -1,0 +1,84 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/mixins.scss';
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+    .contentContainer {
+        position: relative;
+        padding: 3rem;
+        @include bg(linear-gradient(180deg, #FFFFFF 0%, #E4E4E4 100%), 15px);
+        .closingButtonContainer{
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            cursor: pointer;
+        }
+        .donationFormContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            // width: 500px;
+            .subHeadlineContainer {
+                @include text(1.3rem, $main-dark-grey, Jost);
+                text-transform: uppercase;
+            }
+            .headlineContainer {
+                @include text(3rem, $main-dark-grey, JostBold);
+                text-transform: capitalize;
+            }
+            .coinPaymentContainer {
+                display: flex;
+                gap: 3rem;
+                .donationFormContainer {
+                    display: flex;
+                    justify-content: space-between;
+                    .coinPaymentMethodContainer {
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+                        opacity: .3;
+                        &.active {
+                            opacity: 1;
+                        }
+                    }
+                    // .bottomBorder {
+                    //     width: 100%;
+                    //     border-bottom: 1px solid #D9D9D9;
+                    // }
+                }
+            }
+        }
+    }
+}
+
+.containerCoinPayment {
+    display: flex;
+    flex-direction: column;
+    .sendDonationCoinPayment {
+        .textCoinPayment {
+            .titleCoinPayment {
+                @include text(1rem, $main-black, JostBold);
+            }
+        }
+    }
+}

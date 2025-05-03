@@ -1,0 +1,32 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem .5rem 1rem .5rem;
+    @include bg($main-white, 8px);
+    box-shadow: 0px 16.764px 29.1165px rgba(111, 109, 113, 0.13);
+    cursor: pointer;
+    transition: .5s;
+    &:hover {
+        @include bg($linear-gradient-green, 8px);
+        .titleContainer {
+            @include text(1.8rem, $main-white, JostBold);
+            @media(max-width: 810px) {
+                @include text(1rem, $main-title-dark, Jost);
+            }
+        }
+    }
+    .imageContainer {
+        width: 100%;
+    }
+    .titleContainer {
+        @include text(1.8rem, $main-title-dark, JostBold);
+        @media(max-width: 810px) {
+            @include text(1rem, $main-title-dark, JostBold);
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+    @include text(1rem, $main-black, Jost);
+    text-align: center;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    margin: 3rem 1rem;
+    &.transparent {
+        @include text(1rem, $main-black, Jost);
+        text-align: center;
+        display: flex;
+        gap: .5rem;
+        justify-content: center;
+        padding: 0 1rem; 
+    }
+    @media(max-width: 755px) {
+        flex-direction: column;
+        @include text(.9rem, $main-black, Jost);
+    }
+    .linkContainer {
+        @include text(1rem, green, Jost);
+        @media(max-width: 755px) {
+            @include text(.9rem, green, Jost);
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@import '../../../../../styles/mixins.scss';
+
+.imageContainer {
+    width: 80px;
+    height: 72px;
+    position: relative;
+    @include bg($main-white, 6px);
+    padding: 1rem;
+    cursor: pointer;
+}

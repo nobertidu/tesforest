@@ -1,0 +1,113 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.stepContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    gap: .5rem;
+    @include bg($secondary-white-light, 18px);
+    box-shadow: 0px 5px 0px -1px #b6b6b6;
+    @media(max-width: 755px) {
+        padding: .5rem 0 .5rem .5rem;
+    }
+    &.inProgress {
+        @include bg($linear-gradient-green, 18px);
+        box-shadow: 0px 5px 0px -1px #165b31;
+        .infoContainer{
+            .taskNumberContainer {
+                @include text(4rem, $main-white, JostBold);
+                line-height: 4rem;
+                @media(max-width: 755px) {
+                    @include text(2.8rem, $main-white, JostBold);
+                    line-height: 2.8rem;
+                }
+            } 
+            .textContainer {
+                display: flex;
+                flex-direction: column;
+                gap: .2rem;
+                .titleContainer {
+                    @include text(1.5rem, $main-white, JostBold);
+                    @media(max-width: 755px) {
+                        @include text(.875rem, $main-white, JostBold);
+                    }
+                }
+                .descriptionContainer {
+                    @include text(.9rem, $main-white, Jost);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    @media(max-width: 755px) {
+                        @include text(.7rem, $main-white, Jost);
+                    }
+                    .orderedContainer {
+                        padding-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .infoContainer {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 0 1rem;
+        .taskNumberContainer {
+            @include text(4rem, green, JostBold);
+            line-height: 4rem;
+            @media(max-width: 755px) {
+                @include text(2.8rem, green, JostBold);
+                line-height: 2.8rem;
+            }
+        }
+        .textContainer {
+            display: flex;
+            flex-direction: column;
+            gap: .2rem;
+            .titleContainer {
+                @include text(1.5rem, $main-text-dark, JostBold);
+                @media(max-width: 755px) {
+                    @include text(.875rem, $main-text-dark, JostBold);
+                }
+            }
+            .descriptionContainer {
+                @include text(.9rem, $main-text-dark, Jost);
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                @media(max-width: 755px) {
+                    @include text(.7rem, $main-text-dark, Jost);
+                }
+                .orderedContainer {
+                    padding-left: 1rem;
+                }
+            }
+        }
+    }
+
+    .inProgress {
+        @include text(.8rem, $main-white, JostBold);
+        white-space: nowrap;
+        &.rotated {
+            transform: rotate(-90deg);
+            @media(max-width: 755px) {
+                @include text(.5rem, $main-white, JostBold);
+            }
+        }
+    }
+}
+
+.container {
+    @include bg($linear-gradient-green, 25px);
+    @include text(1.1rem, $main-white, Jost);
+    text-align: center;
+    padding: 2.75rem 3rem;
+    box-shadow: 0px 5px 0px -1px #165b31;
+    @media(max-width: 755px) {
+        @include text(.9rem, $main-white, Jost);
+        padding: 1.875rem;
+    }
+}

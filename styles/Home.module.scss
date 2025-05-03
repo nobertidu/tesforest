@@ -1,0 +1,25 @@
+@import '../styles/colors.scss';
+@import '../styles/mixins.scss';
+
+.label {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.83) 0%, rgba(43, 43, 43, 0) 20%), url('/background/HomeBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 0 12rem;
+    @media(max-width: 755px) {
+        padding: 0 0 8rem;
+        background: linear-gradient(180deg, rgba(172, 167, 39, 0.74) 0%, rgba(43, 43, 43, 0) 80%), url("/background/HomeBg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.sectionContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6.5rem;
+    padding-bottom: 3rem;
+}

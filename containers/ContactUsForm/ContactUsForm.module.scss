@@ -1,0 +1,40 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    @include blur-bg;
+    gap: 2rem;
+    padding: 3.125rem 3.75rem;
+    @media(max-width: 475px) {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.84) 0%, #FFFFFF 10.15%, #FFFFFF 100%);
+        gap: 1.5rem;
+    }
+    .titleContainer {
+        @include text(3.75rem, $main-white, JostBold);
+        text-transform: uppercase;
+        text-shadow: 0px 4px 9px rgba(0, 0, 0, 0.75);
+        letter-spacing: 15px;
+        text-align: center;
+        @media(max-width: 475px) {
+            @include text(1.25rem, $main-title-dark, JostBold);
+            letter-spacing: 1px;
+            text-shadow: none;
+        }
+    }
+    .descriptionContainer {
+        @include text(1rem, $secondary-white-light, Jost);
+        text-align: center;
+        line-height: 170%;
+        @media(max-width: 475px) {
+            @include text(.875rem, $main-title-dark, Jost);
+        }
+        :nth-child(2) {
+            font-style: italic;
+        }
+    }
+}

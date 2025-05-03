@@ -1,0 +1,17 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+    width: fit-content;
+    @include button(67px, $linear-gradient-green);
+    @include text(1rem, $main-white, Jost);
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+    @media(max-width: 755px) {
+        padding: .7rem 3rem;
+    }
+    &.min {
+        @include text(.65rem, $main-white, Jost);
+        padding: .4rem 1.7rem;
+    }
+}

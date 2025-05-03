@@ -1,0 +1,80 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/mixins.scss';
+.container {
+    width: 444px;
+    height: 412px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    background: url('/background/donateCardBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    padding: 2rem 3rem;
+    cursor: pointer;
+    border: 1px solid $secondary-white-light;
+    @media(max-width: 555px) {
+        width: 320px;
+        height: 272px;
+        gap: .5rem;
+    }
+    &:hover {
+        background: url('/background/donateCardHoverBg.png');
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        border: 1px solid $main-white;
+        .donationContainer,
+        .walletContainer {
+            color: $main-white;
+        }
+        .headlineContainer {
+            :nth-child(1) {
+                color: $main-white;
+            }
+            :nth-child(2) {
+                color: $main-white;
+            }
+        }
+    }
+    .headlineContainer {
+        display: flex;
+        flex-direction: column;
+        gap: .4rem;
+        :nth-child(1) {
+            @include text(1.3rem, $main-dark-grey, Jost);
+            @media(max-width: 555px) {
+                @include text(.9rem, $main-dark-grey, Jost);
+            }
+        }
+        :nth-child(2) {
+            @include text(2rem, $main-dark-grey, JostBold);
+            @media(max-width: 555px) {
+                @include text(1.3rem, $main-dark-grey, Jost);
+            }
+        }
+    }
+    .donationContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .2rem;
+        min-height: 98px;
+        @include text(1.25rem, $main-headline, JostBold);
+        @media(max-width: 555px) {
+            @include text(.9rem, $main-dark-grey, JostBold);
+        }
+    }
+    .walletContainer {
+        @include text(1.25rem, $main-light-grey, Jost);
+        display: flex;
+        align-items: center;
+        max-width: 250px;
+        min-height: 58px;
+        @media(max-width: 555px) {
+            @include text(.9rem, $main-dark-grey, Jost);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    @include bg($main-white, 15px);
+    border: 1px solid #D6D6D6;
+    padding: 1.5rem 1rem;
+    position: relative;
+    width: 50vw;
+    height: 100%;
+    input {
+        border: none;
+        width: 100%;
+        @include text(1rem, $main-light-grey, Jost);
+        @media(max-width:880px){
+            @include text(.7rem, $main-light-grey, Jost);
+
+        }
+    }
+    @media(max-width: 680px) {
+        width: auto;
+    }
+    &.small {
+        width: 60%;
+    }
+}
