@@ -17,7 +17,7 @@ const VolunteerHeroSection = () => {
             JOIN THE GREEN MOVEMENT
           </h1>
           <p className="text-[14px] md:text-[16px] text-[#7A7A7A] max-w-[400px] md:max-w-[450px] mx-auto md:mx-0 my-4 md:my-[44px]">
-            Be a part of something bigger. Whether you're joining solo or as a
+            Be a part of something bigger. Whether you&apos;re joining solo or as a
             family, your time and hands help restore forests and build a
             sustainable future.
           </p>

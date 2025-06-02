@@ -19,7 +19,7 @@ const ForestRevivalSection = () => {
             <div className="flex flex-col md:flex-row md:justify-between items-center md:mx-[86px]  md:my-[53px] my-[70px] gap-4 ">
               {/* Text */}
               <div className="text-center md:text-left">
-                <h2 className="text-[20px] font-bold">FOREST REVIVAL '25</h2>
+                <h2 className="text-[20px] font-bold">FOREST REVIVAL &apos;25</h2>
                 <p className="text-[14px] mt-1 flex justify-center md:justify-start items-center gap-1 text-black">
                   <IoLocationOutline /> Lisbon, Portugal
                 </p>
