@@ -47,7 +47,7 @@ const PlantContact = () => {
                   />
                   <textarea
                     placeholder="Message"
-                    rows="4"
+                    rows={4}
                     className="w-full bg-transparent border border-white/30 px-4 py-2 rounded-md text-white placeholder-gray-300 resize-none"
                   />
                   <button
@@ -75,16 +75,16 @@ const PlantContact = () => {
                 </p>
                 <div className="flex gap-4 text-white text-xl">
                   <a href="#">
-                    <FaInstagram />
+                    <>{FaInstagram({ size: 24 })}</>
                   </a>
                   <a href="#">
-                    <AiOutlineWhatsApp />
+                    <>{AiOutlineWhatsApp({ size: 24 })}</>
                   </a>
                   <a href="#">
-                    <FaXTwitter />
+                    <>{FaXTwitter({ size: 24 })}</>
                   </a>
                   <a href="#">
-                    <FaFacebookF />
+                    <>{FaFacebookF({ size: 24 })}</>
                   </a>
                 </div>
               </div>

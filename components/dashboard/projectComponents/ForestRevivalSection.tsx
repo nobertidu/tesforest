@@ -21,7 +21,8 @@ const ForestRevivalSection = () => {
               <div className="text-center md:text-left">
                 <h2 className="text-[20px] font-bold">FOREST REVIVAL &apos;25</h2>
                 <p className="text-[14px] mt-1 flex justify-center md:justify-start items-center gap-1 text-black">
-                  <IoLocationOutline /> Lisbon, Portugal
+                   <>{IoLocationOutline({ size: 16 })}</>
+                   Lisbon, Portugal
                 </p>
               </div>
 

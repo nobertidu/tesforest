@@ -43,9 +43,11 @@ const PlantTreeSection = () => {
               >
                 <span>{selectedTrees} Trees</span>
                 {openTrees ? (
-                  <IoMdArrowDropup size={16} />
+                  <>{IoMdArrowDropup({ size: 16 })}</>
+                  
                 ) : (
-                  <IoMdArrowDropdown size={16} />
+                   <>{IoMdArrowDropup({ size: 16 })}</>
+                
                 )}
               </button>
               {openTrees && (
@@ -74,9 +76,9 @@ const PlantTreeSection = () => {
               >
                 <span>${selectedAmount}</span>
                 {openAmount ? (
-                  <IoMdArrowDropup size={16} />
+                 <>{IoMdArrowDropup({ size: 16 })}</>
                 ) : (
-                  <IoMdArrowDropdown size={16} />
+                  <>{IoMdArrowDropup({ size: 16 })}</>
                 )}
               </button>
               {openAmount && (

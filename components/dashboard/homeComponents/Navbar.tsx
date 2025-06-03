@@ -21,7 +21,7 @@ const Navbar = () => {
       {/* Mobile Menu Toggle */}
       <div className="md:hidden absolute top-6 right-6">
         <button onClick={() => setIsOpen(!isOpen)} className="text-[#007741]">
-          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          {isOpen ? <>{FaTimes({ size: 20 })}</> : <>{FaBars({ size: 20 })}</>}
         </button>
       </div>
 

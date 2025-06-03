@@ -78,16 +78,22 @@ const BlogPostPage = () => {
         {/* Share + Pagination */}
         <div className="flex flex-col md:flex-row justify-between items-center mt-12 gap-6 md:gap-0">
           {/* Share Section */}
-          <div className="flex items-center gap-3 text-[#7A7A7A] text-sm">
-            <span>Share</span>
-            <FaInstagram className="w-4 h-4 cursor-pointer hover:text-black" />
-            <FaWhatsapp className="w-4 h-4 cursor-pointer hover:text-black" />
-            <FaXTwitter className="w-4 h-4 cursor-pointer hover:text-black" />
-            <LiaFacebookSquare 
-              className="w-4 h-4 cursor-pointer hover:text-black"
-              onClick={handleCopyLink}
-            />
-          </div>
+     <div className="flex items-center gap-4 text-[#7A7A7A] text-sm">
+  <span>Share</span>
+  
+  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+    <>{FaInstagram({ size: 16, className: "hover:text-black transition-colors" })}</>
+  </a>
+  <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+    <>{FaWhatsapp({ size: 16, className: "hover:text-black transition-colors" })}</>
+  </a>
+  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+    <>{FaXTwitter({ size: 16, className: "hover:text-black transition-colors" })}</>
+  </a>
+  <a href="#" onClick={(e) => { e.preventDefault(); handleCopyLink(); }} className="hover:text-black transition-colors">
+    <>{LiaFacebookSquare({ size: 16 })}</>
+  </a>
+</div>
 
           {/* Pagination Buttons */}
           <div className="flex gap-4">
@@ -98,7 +104,7 @@ const BlogPostPage = () => {
                 postIndex === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#b3d4ba]'
               }`}
             >
-              <FaArrowLeft size={14} /> Previous
+                  <>{FaArrowLeft({ size: 14 })}</>
             </button>
 
             <button
@@ -110,7 +116,7 @@ const BlogPostPage = () => {
                   : 'hover:bg-[#b3d4ba]'
               }`}
             >
-              Next <FaArrowRight size={14} />
+              Next <>{FaArrowRight({ size: 14 })}</>
             </button>
           </div>
         </div>

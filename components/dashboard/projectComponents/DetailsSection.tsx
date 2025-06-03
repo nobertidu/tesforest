@@ -106,7 +106,8 @@ const ProjectsSection = () => {
                       <div className="flex justify-between text-[12px] my-3">
                         <span>{project.date}</span>
                         <span className="flex items-center gap-1">
-                          <IoLocationOutline /> {project.location}
+                          <>{IoLocationOutline({ size: 16 })}</>
+                          {project.location}
                         </span>
                       </div>
                     </div>
@@ -122,14 +123,14 @@ const ProjectsSection = () => {
               disabled={currentIndex === 0}
               className="w-8 h-8 rounded-full bg-[#797979] text-white flex items-center justify-center hover:bg-gray-400 transition disabled:opacity-50 cursor-pointer"
             >
-              <FaChevronLeft />
+              <>{FaChevronLeft({ size: 16 })}</>
             </button>
             <button
               onClick={nextSlide}
               disabled={currentIndex + visibleCards >= projectData.length}
               className="w-8 h-8 rounded-full bg-[#797979] text-white flex items-center justify-center hover:bg-gray-400 transition disabled:opacity-50 cursor-pointer"
             >
-              <FaChevronRight />
+              <>{FaChevronRight({ size: 16 })}</>
             </button>
           </div>
         </div>
@@ -154,14 +155,17 @@ const ProjectsSection = () => {
               className="object-cover"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-md text-white p-4">
-              <h3 className="text-[16px] font-bold">{projectData[mobileIndex].title}</h3>
+              <h3 className="text-[16px] font-bold">
+                {projectData[mobileIndex].title}
+              </h3>
               <p className="text-[14px] font-medium text-white/60 mt-1">
                 {projectData[mobileIndex].description}
               </p>
               <div className="flex justify-between text-[12px] my-3">
                 <span>{projectData[mobileIndex].date}</span>
                 <span className="flex items-center gap-1">
-                  <IoLocationOutline /> {projectData[mobileIndex].location}
+                      <>{IoLocationOutline({ size: 16 })}</>
+                  {projectData[mobileIndex].location}
                 </span>
               </div>
             </div>
@@ -175,14 +179,16 @@ const ProjectsSection = () => {
             disabled={mobileIndex === 0}
             className="w-8 h-8 rounded-full bg-[#797979] text-white flex items-center justify-center hover:bg-gray-400 transition disabled:opacity-50 cursor-pointer"
           >
-            <FaChevronLeft />
+                <>{FaChevronLeft({ size: 16 })}</>
+            
           </button>
           <button
             onClick={nextMobile}
             disabled={mobileIndex >= projectData.length - 1}
             className="w-8 h-8 rounded-full bg-[#797979] text-white flex items-center justify-center hover:bg-gray-400 transition disabled:opacity-50 cursor-pointer"
           >
-            <FaChevronRight />
+            <>{FaChevronRight({ size: 16 })}</>
+           
           </button>
         </div>
       </div>

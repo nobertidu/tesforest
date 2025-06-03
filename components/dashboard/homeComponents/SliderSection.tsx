@@ -58,8 +58,6 @@ const SliderSection = () => {
       style={{ backgroundImage: "url('/dashboard/images/SliderBG.png')" }}
     >
       <div className="relative backdrop-blur-lg border border-white/20 rounded-[24px] shadow-2xl w-full max-w-[1200px] text-white overflow-hidden p-6 md:p-12 mb-[90px] mt-[30px]">
-    
-
         <div className="relative z-10 space-y-12">
           {/* Slider Box */}
           <div className="relative flex flex-col md:flex-row gap-8 md:gap-11 items-center border border-white/30 rounded-2xl p-4 md:p-6 max-w-[900px] mx-auto transition-all duration-700 ease-in-out">
@@ -69,7 +67,9 @@ const SliderSection = () => {
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               <div className="relative z-10 text-white text-center">
-                <h3 className="text-[20px] font-semibold my-3">{slide.title}</h3>
+                <h3 className="text-[20px] font-semibold my-3">
+                  {slide.title}
+                </h3>
                 <p className="text-[16px]">{slide.estimate}</p>
                 <p className="text-[16px] my-3">{slide.trend}</p>
                 <p className="text-[16px]">{slide.equivalent}</p>
@@ -79,7 +79,9 @@ const SliderSection = () => {
 
             {/* Text */}
             <div className="w-full text-center md:text-left">
-              <h2 className="text-[24px] md:text-[26px] font-bold mb-2">{slide.heading}</h2>
+              <h2 className="text-[24px] md:text-[26px] font-bold mb-2">
+                {slide.heading}
+              </h2>
               <p className="text-[15px] md:text-[16px] text-white/80 mx-auto md:mx-0 max-w-md">
                 {slide.description}
               </p>
@@ -99,29 +101,39 @@ const SliderSection = () => {
             </div>
 
             {/* Arrows (only desktop) */}
-            <IoIosArrowDropleft
+            <div
               onClick={prevSlide}
               className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 text-white text-3xl cursor-pointer hidden md:block"
-            />
-            <IoIosArrowDropright
+            >
+              {IoIosArrowDropleft({ size: 24, color: "white" })}
+            </div>
+
+            <div
               onClick={nextSlide}
               className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 text-white text-3xl cursor-pointer hidden md:block"
-            />
+            >
+              {IoIosArrowDropright({ size: 24, color: "white" })}
+            </div>
           </div>
 
           {/* Bottom Stats */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[900px] mx-auto  text-center md:text-left">
             <div>
-              <h3 className="text-[24px] md:text-[34px] font-bold mb-2">Oxygen Production</h3>
+              <h3 className="text-[24px] md:text-[34px] font-bold mb-2">
+                Oxygen Production
+              </h3>
               <p className="text-[15px] md:text-[16px]">12,500 kg O₂/year</p>
               <p className="text-[15px] md:text-[16px]">
                 Equivalent to: 🏃Oxygen for 25,000 people annually
               </p>
             </div>
             <div>
-              <h3 className="text-[24px] md:text-[34px] font-bold mb-1">Air Quality Improvement</h3>
+              <h3 className="text-[24px] md:text-[34px] font-bold mb-1">
+                Air Quality Improvement
+              </h3>
               <p className="text-[15px] md:text-[16px] mb-2">
-                -14% (Improved air purity), NOₓ Reduction: -9%, Lower nitrogen dioxide emissions
+                -14% (Improved air purity), NOₓ Reduction: -9%, Lower nitrogen
+                dioxide emissions
               </p>
               <p className="text-[15px] md:text-[16px]">CO Levels: Stable</p>
             </div>

@@ -61,7 +61,8 @@ const VolunteerStories = () => {
       {/* Header */}
       <div className="bg-[#74a43e98] max-w-[202px] rounded-[4px] flex justify-center items-center mx-auto py-1 px-3 mb-8">
         <div className="flex items-center gap-2 text-[16px] font-medium text-black">
-          <IoArrowDownOutline />
+           <>{IoArrowDownOutline({ size: 16 })}</>
+        
           <p className="m-0">See Volunteer Stories</p>
         </div>
       </div>
@@ -79,7 +80,8 @@ const VolunteerStories = () => {
                 : "hover:bg-white/20"
             }`}
           >
-            <FaChevronLeft />
+              <>{FaChevronLeft({ size: 16 })}</>
+         
           </button>
           <button
             onClick={next}
@@ -90,7 +92,8 @@ const VolunteerStories = () => {
                 : "hover:bg-white/20"
             }`}
           >
-            <FaChevronRight />
+             <>{FaChevronRight({ size: 16 })}</>
+         
           </button>
 
           <div className="flex gap-4">
@@ -146,7 +149,8 @@ const VolunteerStories = () => {
                 : "opacity-100"
             }`}
           >
-            <FaChevronLeft />
+              <>{FaChevronLeft({ size: 16 })}</>
+        
           </button>
 
           <div className="overflow-hidden w-full">
@@ -189,7 +193,8 @@ const VolunteerStories = () => {
                 : "opacity-100"
             }`}
           >
-            <FaChevronRight />
+              <>{FaChevronRight({ size: 16 })}</>
+           
           </button>
         </div>
       </div>
