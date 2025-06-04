@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const blogPosts = [
   {
@@ -84,11 +85,18 @@ const BlogGrid = () => {
         {filteredPosts.map((post, index) => (
           <div key={index} className="flex flex-col min-h-[400px]">
             <div className="relative w-full md:w-[533px]">
-              <img
+              <Image
                 src={post.image}
                 alt={post.title}
+                width={800}
+                height={400}
                 className="w-full h-[200px] md:min-h-[220px] object-cover"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
+
               <div className="absolute bottom-0 h-[50px] w-full text-white text-[14px] text-center font-bold flex justify-center items-center backdrop-blur-md bg-white/30 z-10">
                 <div className="absolute bottom-4 left-4 text-white px-[12px] font-medium">
                   {post.date}
